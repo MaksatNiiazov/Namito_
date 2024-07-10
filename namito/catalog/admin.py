@@ -39,12 +39,13 @@ class CategoryAdmin(DraggableMPTTAdmin):
         "type",
         "parent",
     ]
+    exclude = ["name"]
     list_display_links = ("indented_name",)
     list_filter = [
         "parent",
         'type'
     ]
-    search_fields = ["id", 'name']
+    search_fields = ["id"]
     list_select_related = ["parent"]
     mptt_level_indent = 20
 
