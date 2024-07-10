@@ -39,7 +39,7 @@ class CategoryAdmin(DraggableMPTTAdmin):
         "type",
         "parent",
     ]
-    exclude = ["name"]
+    exclude = ["name", "type"]
     list_display_links = ("indented_name",)
     list_filter = [
         "parent",
